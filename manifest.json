@@ -21,5 +21,6 @@
     "48": "./assets/60x60/green-60x60.png",
     "128": "./assets/60x60/green-60x60.png"
   },
-  "permissions": ["storage", "activeTab", "scripting"]
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "activeTab"]
 }
