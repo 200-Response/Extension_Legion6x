@@ -14,12 +14,22 @@
       <p>Este sitio si contiene sesgo de genero</p>
 
       <div class="containerFaces">
-        <img id="greenFace" src="./assets/60x60/green-60x60.png" />
-        <img id="redFace" src="./assets/60x60/yellow-60x60.png" />
         <img id="yellowFace" src="./assets/60x60/red-60x60.png" />
+        <img id="redFace" src="./assets/60x60/yellow-60x60.png" />
+        <img id="greenFace" src="./assets/60x60/green-60x60.png" />
       </div>
-
-      <div class="containerSlider"></div>
+      <div class="slideContainer">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="1"
+          id="myRange"
+          class="slider"
+        />
+        <p>value: <span id="value"></span></p>
+        <script src="slider.js"></script>
+      </div>
     </div>
   </body>
 </html>
