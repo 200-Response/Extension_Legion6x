@@ -3,6 +3,9 @@ function getRandomNumber(number) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+//test
+// test
+
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   if (msg.name === 'fetchWords') {
     const pokem = [
