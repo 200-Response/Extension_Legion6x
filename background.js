@@ -3,6 +3,11 @@ function getRandomNumber(number) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+function getColor(str) {
+  if (str === 'red') return './assets/60x60/red-60x60.png';
+  if (str === 'yellow') return './assets/60x60/yellow-60x60.png';
+  if (str === 'green') return './assets/60x60/green-60x60.png';
+}
 //test
 // test
 
@@ -40,6 +45,30 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
       });
 
     // response({ api: apiCall, nombre: name });
+  }
+  return true;
+});
+
+chrome.runtime.onMessage.addListener((msg, sender, response) => {
+  if (msg.name === 'fetchWords') {
+    chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+      let url = tabs[0].url;
+      console.log('url', encodeURIComponent(url));
+      // use `url` here inside the callback because it's asynchronous!
+    });
+  }
+
+  if (msg.icon1) {
+    chrome.tabs.query(
+      { active: true, windowType: 'normal', currentWindow: true },
+      function (d) {
+        var tabId = d[0].id;
+        chrome.action.setIcon({
+          path: getColor(msg.icon1),
+          tabId: tabId,
+        });
+      }
+    );
   }
   return true;
 });
