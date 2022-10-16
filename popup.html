@@ -9,19 +9,23 @@
   </head>
   <body>
     <div class="container">
-      <h2>Legion-6x</h2>
-      <h4>Sesgo de Genero</h4>
+      <div class="containerLogo">
+        <h2>Legion-6x</h2>
+        <a href="https://www.200response.mx" target="_blank"
+          ><img class="iconLogo" src="./assets/img/logo200R-2021.png"
+        /></a>
+      </div>
+      <h4 style="padding-left: 1rem">Sesgo de Genero</h4>
 
-      <p id="parraf">
-        Este sitio <span>sí</span> contiene <span>sesgo de genero</span>
-      </p>
+      <p id="parraf">Buscando sesgo de genero.</p>
 
-      <div class="containerFaces">
+      <div class="containerFaces" id="containerFaces" style="display: none">
         <img id="greenFace" src="./assets/60x60/green-60x60.png" />
         <img id="yellowFace" src="./assets/60x60/yellow-60x60.png" />
         <img id="redFace" src="./assets/60x60/red-60x60.png" />
       </div>
-      <div class="slideContainer">
+
+      <div class="slideContainer" id="slideContainer" style="display: none">
         <input
           type="range"
           min="1"
@@ -30,7 +34,10 @@
           id="myRange"
           class="slider"
         />
-        <!-- <p>value: <span id="value"></span></p> -->
+      </div>
+
+      <div class="ContainerSpinner">
+        <div class="spinner" id="spinner"></div>
       </div>
 
       <div class="checkBtn">
