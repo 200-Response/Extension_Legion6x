@@ -4,6 +4,9 @@ const redFace = document.getElementById('redFace');
 const yellowFace = document.getElementById('yellowFace');
 const greenFace = document.getElementById('greenFace');
 const parraf = document.getElementById('parraf');
+const containerFaces = document.getElementById('containerFaces');
+const containerBar = document.getElementById('slideContainer');
+const spinner = document.getElementById('spinner');
 
 document.addEventListener('DOMContentLoaded', function () {
   bton.addEventListener('click', function () {
@@ -14,11 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
 chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
   parraf.innerHTML = JSON.stringify(response);
 
+  if (response.word === 'Error') {
+    parraf.innerHTML = response.desc;
+    spinner.style.display = 'none';
+    return;
+  }
+
   if (response.number < 0.3) {
     //green
     redFace.style.filter = 'grayscale(100%)';
     yellowFace.style.filter = 'grayscale(100%)';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(214,214,214) ${20}%)`;
+    containerFaces.style.display = 'flex';
+    containerBar.style.display = 'flex';
+    spinner.style.display = 'none';
     slider.value = 20;
     parraf.innerHTML = ` <p id="parraf">
       Este sitio <span>no</span> contiene <span>sesgo de genero</span>
@@ -32,6 +44,9 @@ chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
     redFace.style.filter = 'grayscale(100%)';
     greenFace.style.filter = 'grayscale(100%)';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(249,205,53), rgb(214,214,214) ${50}%)`;
+    containerFaces.style.display = 'flex';
+    containerBar.style.display = 'flex';
+    spinner.style.display = 'none';
     slider.value = 50;
     parraf.innerHTML = ` <p id="parraf">
       Este sitio <span>puede</span> contener <span>sesgo de genero</span>
@@ -45,6 +60,9 @@ chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
     yellowFace.style.filter = 'grayscale(100%)';
     greenFace.style.filter = 'grayscale(100%)';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(249,205,53), rgb(213,0,0)`;
+    containerFaces.style.display = 'flex';
+    containerBar.style.display = 'flex';
+    spinner.style.display = 'none';
     slider.value = 100;
     parraf.innerHTML = ` <p id="parraf">
    Este sitio <span>sí</span> contiene <span>sesgo de genero</span>

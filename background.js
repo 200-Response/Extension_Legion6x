@@ -14,7 +14,10 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
       fetch(apiCall)
         .then(function (res) {
           if (res.status !== 200) {
-            response({ word: 'Error', desc: 'Problema al cargar el api2' });
+            response({
+              word: 'Error',
+              desc: 'Error al conectar con el servidor',
+            });
             return;
           }
           res.json().then(function (data) {
@@ -23,7 +26,10 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
           });
         })
         .catch(function (err) {
-          response({ word: 'Error', desc: 'Problema al cargar el api1' });
+          response({
+            word: 'Error',
+            desc: 'Error al conectar con el servidor',
+          });
         });
     });
   }
