@@ -4,7 +4,8 @@
 
 p {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
 .ContainerSpinner {
@@ -13,6 +14,12 @@ p {
   justify-content: center;
   /* margin-top: 3rem;
   margin-bottom: 2rem; */
+}
+
+.desc {
+  text-align: center;
+  font-size: small;
+  font-weight: 500;
 }
 
 .containerLogo {

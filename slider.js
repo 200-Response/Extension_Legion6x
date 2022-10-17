@@ -25,8 +25,8 @@ chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
 
   if (response.number < 0.3) {
     //green
-    redFace.style.filter = 'grayscale(100%)';
-    yellowFace.style.filter = 'grayscale(100%)';
+    redFace.src = './assets/icons/disable/g-60x60/redg-60x60.png';
+    yellowFace.src = './assets/icons/disable/g-60x60/yellowg-60x60.png';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(214,214,214) ${20}%)`;
     containerFaces.style.display = 'flex';
     containerBar.style.display = 'flex';
@@ -41,8 +41,8 @@ chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
 
   if (response.number >= 0.3 && response.number <= 0.7) {
     //yellow
-    redFace.style.filter = 'grayscale(100%)';
-    greenFace.style.filter = 'grayscale(100%)';
+    redFace.src = './assets/icons/disable/g-60x60/redg-60x60.png';
+    greenFace.src = './assets/icons/disable/g-60x60/greeng-60x60.png';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(249,205,53), rgb(214,214,214) ${50}%)`;
     containerFaces.style.display = 'flex';
     containerBar.style.display = 'flex';
@@ -57,8 +57,8 @@ chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
 
   if (response.number > 0.7) {
     //red
-    yellowFace.style.filter = 'grayscale(100%)';
-    greenFace.style.filter = 'grayscale(100%)';
+    greenFace.src = './assets/icons/disable/g-60x60/greeng-60x60.png';
+    yellowFace.src = './assets/icons/disable/g-60x60/yellowg-60x60.png';
     slider.style.background = `linear-gradient(90deg, rgb(0,221,3), rgb(249,205,53), rgb(213,0,0)`;
     containerFaces.style.display = 'flex';
     containerBar.style.display = 'flex';
