@@ -1,7 +1,7 @@
 function getColor(str) {
-  if (str === 'red') return './assets/30x30/red-30x30.png';
-  if (str === 'yellow') return './assets/30x30/yellow-30x30.png';
-  if (str === 'green') return './assets/30x30/green-30x30.png';
+  if (str === 'red') return './assets/icons/active/30x30/red-30x30.png';
+  if (str === 'yellow') return './assets/icons/active/30x30/yellow-30x30.png';
+  if (str === 'green') return './assets/icons/active/30x30/green-30x30.png';
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, response) => {

@@ -1,7 +1,7 @@
 {
   "name": "Legion-6x",
   "description": "IA sesgo de genero",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -9,17 +9,17 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "./assets/60x60/green-60x60.png",
-      "32": "./assets/60x60/green-60x60.png",
-      "48": "./assets/60x60/green-60x60.png",
-      "128": "./assets/60x60/green-60x60.png"
+      "16": "./assets/icons/active/60x60/green-60x60.png",
+      "32": "./assets/icons/active/60x60/green-60x60.png",
+      "48": "./assets/icons/active/60x60/green-60x60.png",
+      "128": "./assets/icons/active/60x60/green-60x60.png"
     }
   },
   "icons": {
-    "16": "./assets/60x60/green-60x60.png",
-    "32": "./assets/60x60/green-60x60.png",
-    "48": "./assets/60x60/green-60x60.png",
-    "128": "./assets/60x60/green-60x60.png"
+    "16": "./assets/icons/active/60x60/green-60x60.png",
+    "32": "./assets/icons/active/60x60/green-60x60.png",
+    "48": "./assets/icons/active/60x60/green-60x60.png",
+    "128": "./assets/icons/active/60x60/green-60x60.png"
   },
   "host_permissions": ["<all_urls>"],
   "permissions": ["storage", "activeTab", "scripting", "tabs", "activeTab"]
