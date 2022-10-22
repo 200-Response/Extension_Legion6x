@@ -1,12 +1,86 @@
-function renderBody() {
-  return `
-  <div class="main">
+function svgIcon() {
+  return `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+<path style="fill:#FF757C;" d="M495.441,72.695L439.306,16.56c-8.498-8.498-22.278-8.498-30.777,0L271.389,153.7
+   c-8.498,8.498-22.278,8.498-30.777,0L103.472,16.56c-8.498-8.498-22.278-8.498-30.777,0L16.56,72.695
+   c-8.498,8.498-8.498,22.278,0,30.777l137.14,137.14c8.498,8.498,8.498,22.278,0,30.777L16.56,408.529
+   c-8.498,8.498-8.498,22.278,0,30.777l56.136,56.136c8.498,8.498,22.278,8.498,30.777,0l137.14-137.14
+   c8.498-8.498,22.278-8.498,30.777,0l137.14,137.14c8.498,8.498,22.278,8.498,30.777,0l56.136-56.136
+   c8.498-8.498,8.498-22.278,0-30.777l-137.14-137.139c-8.498-8.498-8.498-22.278,0-30.777l137.14-137.14
+   C503.941,94.974,503.941,81.194,495.441,72.695z"/>
+<g>
+   <path style="fill:#4D4D4D;" d="M88.084,511.999c-8.184,0-16.369-3.115-22.6-9.346L9.347,446.518
+       c-12.462-12.462-12.462-32.739,0-45.201l137.14-137.14c4.508-4.508,4.508-11.843,0-16.351L9.347,110.685
+       c-12.462-12.463-12.462-32.74,0-45.201L65.482,9.348c12.464-12.462,32.74-12.462,45.201,0l137.141,137.14
+       c4.508,4.508,11.843,4.508,16.351,0l137.14-137.14c12.461-12.461,32.738-12.462,45.2,0l56.138,56.136
+       c12.462,12.462,12.462,32.739,0,45.201l-137.14,137.14c-4.508,4.508-4.508,11.843,0,16.351l137.14,137.14
+       c12.462,12.463,12.462,32.74,0,45.201l-56.136,56.136c-12.464,12.462-32.74,12.462-45.201,0l-137.141-137.14
+       c-4.508-4.508-11.843-4.508-16.351,0l-137.14,137.14C104.454,508.884,96.268,511.999,88.084,511.999z M88.084,20.391
+       c-2.961,0-5.922,1.127-8.177,3.381L23.772,79.908c-4.508,4.508-4.508,11.844,0,16.352l137.14,137.139
+       c12.462,12.462,12.462,32.739,0,45.201l-137.14,137.14c-4.508,4.508-4.508,11.844,0,16.351l56.136,56.137
+       c4.508,4.508,11.843,4.507,16.351,0l137.14-137.14c12.463-12.463,32.739-12.463,45.201,0l137.14,137.139
+       c4.508,4.509,11.842,4.508,16.352,0l56.135-56.136c4.508-4.508,4.508-11.844,0-16.352L351.089,278.602
+       c-12.462-12.462-12.462-32.739,0-45.201l137.14-137.14c4.508-4.508,4.508-11.844,0-16.351l0,0l-56.136-56.136
+       c-4.509-4.507-11.844-4.507-16.351,0l-137.14,137.139c-12.463,12.463-32.739,12.463-45.201,0L96.259,23.772
+       C94.005,21.518,91.045,20.391,88.084,20.391z"/>
+   <path style="fill:#4D4D4D;" d="M88.935,473.447c-2.611,0-5.22-0.996-7.212-2.988c-3.983-3.983-3.983-10.442,0-14.426l82.476-82.475
+       c3.984-3.983,10.441-3.983,14.426,0c3.983,3.983,3.983,10.442,0,14.426L96.148,470.46
+       C94.155,472.452,91.545,473.447,88.935,473.447z"/>
+   <path style="fill:#4D4D4D;" d="M195.201,367.181c-2.611,0-5.22-0.996-7.212-2.987c-3.983-3.983-3.983-10.442,0-14.426l6.873-6.873
+       c3.984-3.983,10.44-3.983,14.426,0c3.983,3.983,3.983,10.442,0,14.426l-6.873,6.873
+       C200.421,366.184,197.812,367.181,195.201,367.181z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>`;
+}
 
+function renderBody(img) {
+  return `
+  <div>
+    <div class="barcontainer">
+        <div class="bar">
+            ${svgIcon()}
+        </div>
+    </div>
+    <div class="mainDeican">
+
+    <img src="${img}">
     <div class="container">
-        <h2>Página Bloqueada</h2>
+        <h1>Página Bloqueada</h1>
         <p>Esta página no está libre de sesgo de género y es considerada como inapropiada. Contacta a tu administrador para más detalles</p>
     </div>
+    </div>
   </div>
+
   `;
 }
 
@@ -20,236 +94,46 @@ chrome.runtime.onConnect.addListener(function (port) {
               document.createElement('style')
             ).innerHTML = css);
           //red
-          document.body.innerHTML = renderBody();
-          const text = document.getElementById('texto');
 
-          //   text.innerHTML = ` <p id="parraf">
-          //        Este sitio <span>sí</span> contiene <span>sesgo de genero</span>
-          //      </p>`;
+          let filename = '/assets/icons/block/block-red-100x100.png';
+          let file = filename;
+          let url = chrome.runtime.getURL(file);
+
+          document.body.innerHTML = renderBody(url);
 
           // Usage:
-          addCSS(`@import url(https://fonts.googleapis.com/css?family=opensans:500);
-        body{
-               
-                color: #000000;
-                font-family: 'Open Sans', sans-serif;
-                max-height:700px;
-                overflow: hidden;
-            }
-            .c{
-                text-align: center;
-                display: block;
-                position: relative;
-                width:80%;
-                margin:100px auto;
-            }
-            ._404{
-                font-size: 220px;
-                position: relative;
-                display: inline-block;
-                z-index: 2;
-                height: 250px;
-                letter-spacing: 15px;
-            }
-            ._1{
-                text-align:center;
-                display:block;
-                position:relative;
-                letter-spacing: 12px;
-                font-size: 4em;
-                line-height: 80%;
-            }
-            ._2{
-                text-align:center;
-                display:block;
-                position: relative;
-                font-size: 20px;
-            }
-            .text{
-                font-size: 40px;
-                text-align: center;
-                position: relative;
-                display: inline-block;
-                margin: 19px 0px 0px 0px;
-                /* top: 256.301px; */
-                z-index: 3;
-                width: 100%;
-                line-height: 1.2em;
-                display: inline-block;
-            }
+          addCSS(`
+          body {
+            background: white !important;
+            display: flex !important;
+            justify-content: center !important;
             
+          }
+          
+          .mainDeican {
+            color: black !important;
+            width: 70vh !important;
+            height: 50vh !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 30px !important;
+            font-size: 13px !important;
+          }
 
-            .btn{
-                background-color: rgb( 255, 255, 255 );
-                position: relative;
-                display: inline-block;
-                width: 358px;
-                padding: 5px;
-                z-index: 5;
-                font-size: 25px;
-                margin:0 auto;
-                color:#33cc99;
-                text-decoration: none;
-                margin-right: 10px
-            }
-            .right{
-                float:right;
-                width:60%;
-            }
-            
-            hr{
-                padding: 0;
-                border: none;
-                border-top: 5px solid #fff;
+          .barcontainer{
+              display: flex !important;
+              justify-content: end !important;
+
+          }
+          
+          .bar {
+            width: 30px !important;
+            height: 30px !important;
+            padding-top: 10px;
            
-                text-align: center;
-                margin: 0px auto;
-                width: 420px;
-                height:10px;
-                z-index: -10;
-            }
-            
-            hr:after {
-                
-                display: inline-block;
-                position: relative;
-                top: -0.75em;
-                font-size: 2em;
-                padding: 0 0.2em;
-                background: #33cc99;
-            }
-            
-            .cloud {
-                width: 350px; height: 120px;
-
-                background:  #000000;
-                background: linear-gradient(top,  #000000 100%);
-                background: -webkit-linear-gradient(top,  #000000 100%);
-                background: -moz-linear-gradient(top,  #000000 100%);
-                background: -ms-linear-gradient(top,  #000000 100%);
-                background: -o-linear-gradient(top,  #000000 100%);
-
-                border-radius: 100px;
-                -webkit-border-radius: 100px;
-                -moz-border-radius: 100px;
-
-                position: absolute;
-                margin: 120px auto 20px;
-                z-index:-1;
-                transition: ease 1s;
-            }
-
-            .cloud:after, .cloud:before {
-                content: '';
-                position: absolute;
-                background: #FFF;
-                z-index: -1
-            }
-
-            .cloud:after {
-                width: 100px; height: 100px;
-                top: -50px; left: 50px;
-
-                border-radius: 100px;
-                -webkit-border-radius: 100px;
-                -moz-border-radius: 100px;
-            }
-
-            .cloud:before {
-                width: 180px; height: 180px;
-                top: -90px; right: 50px;
-
-                border-radius: 200px;
-                -webkit-border-radius: 200px;
-                -moz-border-radius: 200px;
-            }
-            
-            .x1 {
-                top:-50px;
-                left:100px;
-                -webkit-transform: scale(0.3);
-                -moz-transform: scale(0.3);
-                transform: scale(0.3);
-                opacity: 0.9;
-                -webkit-animation: moveclouds 15s linear infinite;
-                -moz-animation: moveclouds 15s linear infinite;
-                -o-animation: moveclouds 15s linear infinite;
-            }
-            
-            .x1_5{
-                top:-80px;
-                left:250px;
-                -webkit-transform: scale(0.3);
-                -moz-transform: scale(0.3);
-                transform: scale(0.3);
-                -webkit-animation: moveclouds 17s linear infinite;
-                -moz-animation: moveclouds 17s linear infinite;
-                -o-animation: moveclouds 17s linear infinite; 
-            }
-
-            .x2 {
-                left: 250px;
-                top:30px;
-                -webkit-transform: scale(0.6);
-                -moz-transform: scale(0.6);
-                transform: scale(0.6);
-                opacity: 0.6; 
-                -webkit-animation: moveclouds 25s linear infinite;
-                -moz-animation: moveclouds 25s linear infinite;
-                -o-animation: moveclouds 25s linear infinite;
-            }
-
-            .x3 {
-                left: 250px; bottom: -70px;
-
-                -webkit-transform: scale(0.6);
-                -moz-transform: scale(0.6);
-                transform: scale(0.6);
-                opacity: 0.8; 
-
-                -webkit-animation: moveclouds 25s linear infinite;
-                -moz-animation: moveclouds 25s linear infinite;
-                -o-animation: moveclouds 25s linear infinite;
-            }
-
-            .x4 {
-                left: 470px; botttom: 20px;
-
-                -webkit-transform: scale(0.75);
-                -moz-transform: scale(0.75);
-                transform: scale(0.75);
-                opacity: 0.75;
-
-                -webkit-animation: moveclouds 18s linear infinite;
-                -moz-animation: moveclouds 18s linear infinite;
-                -o-animation: moveclouds 18s linear infinite;
-            }
-
-            .x5 {
-                left: 200px; top: 300px;
-
-                -webkit-transform: scale(0.5);
-                -moz-transform: scale(0.5);
-                transform: scale(0.5);
-                opacity: 0.8; 
-
-                -webkit-animation: moveclouds 20s linear infinite;
-                -moz-animation: moveclouds 20s linear infinite;
-                -o-animation: moveclouds 20s linear infinite;
-            }
-
-            @-webkit-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }
-            @-moz-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }
-            @-o-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }`);
+          }
+          `);
         }
       }
     });

@@ -1,9 +1,0 @@
-body {
-  background: red;
-}
-
-.copy-icon {
-  content: url('chrome-extension://__MSG_@@extension_id__/logo200R-2021.png');
-  height: 100px;
-  width: 100px;
-}
