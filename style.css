@@ -97,24 +97,6 @@ img {
   pointer-events: none;
 }
 
-.slider::after {
-  content: '100';
-  color: white;
-  font-size: 2rem;
-  position: absolute;
-  left: 80%;
-  top: 26%;
-}
-
-.slider::before {
-  content: '0';
-  color: white;
-  font-size: 2rem;
-  position: absolute;
-  left: 12%;
-  top: 26%;
-}
-
 /* CSS */
 .button-9 {
   appearance: button;

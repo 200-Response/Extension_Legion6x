@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
   chrome.runtime.sendMessage({ name: 'fetchWords' }, (response) => {
-    parraf.innerHTML = JSON.stringify(response);
-
     if (response.word === 'Error') {
       parraf.innerHTML = response.desc;
       spinner.style.display = 'none';
