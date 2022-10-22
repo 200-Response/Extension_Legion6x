@@ -1,11 +1,18 @@
 {
   "name": "Legion-6x",
   "description": "IA sesgo de genero",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["blocking.js"],
+      "run_at": "document_end"
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -21,6 +28,5 @@
     "48": "./assets/icons/active/60x60/green-60x60.png",
     "128": "./assets/icons/active/60x60/green-60x60.png"
   },
-  "host_permissions": ["<all_urls>"],
   "permissions": ["storage", "activeTab", "scripting", "tabs", "activeTab"]
 }

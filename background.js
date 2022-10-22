@@ -8,8 +8,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
   if (msg.name === 'fetchWords') {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
       let url = tabs[0].url;
-      console.log('url', encodeURIComponent(url));
-      // use `url` here inside the callback because it's asynchronous!
+
       const apiCall = `https://fastapi-sesgo.herokuapp.com/${url}`;
       fetch(apiCall)
         .then(function (res) {
