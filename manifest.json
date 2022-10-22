@@ -1,7 +1,7 @@
 {
   "name": "Legion-6x",
   "description": "IA sesgo de genero",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -11,6 +11,12 @@
       "matches": ["<all_urls>"],
       "js": ["blocking.js"],
       "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo200R-2021.png"],
+      "matches": ["<all_urls>"]
     }
   ],
   "action": {

@@ -9,7 +9,12 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
       let url = tabs[0].url;
 
-      const apiCall = `https://fastapi-sesgo.herokuapp.com/${url}`;
+      // const apiCall = `https://fastapi-sesgo.herokuapp.com/${url}`;
+      // const apiCall = `http://ec2-44-200-180-2.compute-1.amazonaws.com:8000/predictor/https%3A%2F%2Fstackoverflow.com%2Fquestions%2F33566843%2Fhow-to-extract-text-from-html-page`;
+      const apiCall = `http://ec2-44-200-180-2.compute-1.amazonaws.com:8000/predictor/${encodeURIComponent(
+        url
+      )}`;
+      console.log('escape', encodeURIComponent(url));
       fetch(apiCall)
         .then(function (res) {
           if (res.status !== 200) {
@@ -20,7 +25,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             return;
           }
           res.json().then(function (data) {
-            response({ number: data.random });
+            response({ data });
             console.log('data', data);
           });
         })
