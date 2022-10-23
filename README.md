@@ -1,4 +1,8 @@
 # Extensión DEICAN Legion-6x
+<br>
+
+## - IMPORTANTE -  La extensión se diseñó con tecnología Google Chrome de preferencia mayor de 106 versión. No es posible en Firefox ni Edge
+<br>
 
 ### Introducción de instalación
 
