@@ -1,7 +1,7 @@
 {
   "name": "DEICAN",
   "description": "Detector de sesgo de género",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
